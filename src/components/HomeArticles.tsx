@@ -33,10 +33,10 @@ const HomeArticles = () => {
    <Row className="g-3">
     {articles &&
      articles.results.map((article, i) => (
-      <Col className=" col col-xs-6 col-md-3 col-lg-4" key={i}>
-       <Card className="h-100 card shadow text-white">
+      <Col className="col-xs-12 col-sm-12 col-md-6 col-lg-4" key={i}>
+       <Card className="h-100 card shadow-md text-white">
         <Card.Img variant="top" src={article.image_url} />
-        <Card.Body>
+        <Card.Body className="d-flex flex-column justify-content-between">
          <Card.Title>{article.title}</Card.Title>
          <Card.Text>{article.summary}</Card.Text>
          <Button variant="dark">Go to full Article</Button>
